@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Воспроизведение записей</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="https://unpkg.com/rrweb/dist/rrweb.min.js"></script>
+</head>
+
+<body>
+  <div id="app" class='home'>
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <h1 class='sidebar__title'>
+          <img src="./assets/img/files.svg" class='sidebar__icon' alt="">
+          Files
+        </h1>
+        <button onClick='getFiles()' class='sidebar-header__btn'>Start</button>
+      </div>
+      <p class="sidebar__desc">
+        <img src="./assets/img/archive.svg" class='sidebar__icon' alt="">
+        Archives:
+      </p>
+      <ul class="sidebar__items archive-items">
+        <li class="sidebar-item">
+          file1
+        </li>
+      </ul>
+      <p class="sidebar__desc">
+        <img src="./assets/img/json-main.svg" class='sidebar__icon' alt="">
+        JSON:
+      </p>
+      <ul class="sidebar__items json-items">
+        <li class="sidebar-item">
+          empty
+        </li>
+      </ul>
+    </div>
+    <div class="player">відео</div>
+  </div>
+</body>
+<script>
+  window.api.readAllName()
+  const getFiles = () => {
+    window.api.getJsonFormat()
+  }
+</script>
+
+</html>
