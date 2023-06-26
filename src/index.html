@@ -19,32 +19,58 @@
         </h1>
         <button onClick='getFiles()' class='sidebar-header__btn'>Start</button>
       </div>
-      <p class="sidebar__desc">
-        <img src="./assets/img/archive.svg" class='sidebar__icon' alt="">
-        Archives:
-      </p>
+      <div class="sidebar__header">
+        <p class="sidebar__desc">
+          <img src="./assets/img/archive.svg" class='sidebar__icon' alt="">
+          Archives:
+        </p>
+        <button class='sidebar__cleaning'>cleaning</button>
+      </div>
       <ul class="sidebar__items archive-items">
         <li class="sidebar-item">
           file1
         </li>
       </ul>
-      <p class="sidebar__desc">
-        <img src="./assets/img/json-main.svg" class='sidebar__icon' alt="">
-        JSON:
-      </p>
+      <div class="sidebar__header">
+        <p class="sidebar__desc">
+          <img src="./assets/img/json-main.svg" class='sidebar__icon' alt="">
+          JSON:
+        </p>
+        <button onClick='clearFiles()' class='sidebar__cleaning'>cleaning</button>
+      </div>
       <ul class="sidebar__items json-items">
         <li class="sidebar-item">
           empty
         </li>
       </ul>
+      <div class="sidebar__header">
+        <p class="sidebar__desc">
+          <img src="./assets/img/inform.svg" class='sidebar__icon' alt="">
+          information:
+        </p>
+
+      </div>
+      <ul class="information">
+        <li class="information__item">Archives: <span class='info-archives'>3</span> </li>
+        <li class="information__item">JSON: <span class='info-json'>5</span></li>
+      </ul>
     </div>
-    <div class="player">відео</div>
+    <div class="player"></div>
   </div>
 </body>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/rrweb-player@latest/dist/style.css" />
 <script>
+  const jsonWindow = document.querySelector('.json-items')
   window.api.readAllName()
   const getFiles = () => {
     window.api.getJsonFormat()
+    //window.api.readAllName()
+  }
+  jsonWindow.addEventListener('click', (e) =>
+    window.api.openVideo(e.target)
+  )
+  const clearFiles = () => {
+    window.api.clearVideo()
   }
 </script>
 

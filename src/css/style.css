@@ -14,7 +14,7 @@
 	justify-content: space-between;
 }
 .sidebar-header__btn {
-	background-color: red;
+	background-color: #4caf50;
 	height: fit-content;
 	border-radius: 5px;
 	color: #fff;
@@ -29,7 +29,6 @@
 
 .sidebar__title {
 	font-size: 18px;
-
 	color: #fff;
 	display: flex;
 	align-items: center;
@@ -39,17 +38,49 @@
 
 .sidebar__desc {
 	font-size: 16px;
-	padding: 7px 15px;
 	display: flex;
 	column-gap: 15px;
 	align-items: center;
 	color: #fff;
-	border-top: 1px solid #fff;
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.sidebar__header {
+	padding: 7px 15px;
+	align-items: center;
+	border-top: 1px solid #fff;
 	border-bottom: 1px dashed #fff;
+	display: flex;
+	justify-content: space-between;
+}
+.sidebar__cleaning {
+	background-color: rgb(173, 4, 4);
+	font-size: 14px;
+	padding: 4px 8px;
+	color: #fff;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.sidebar__cleaning:hover {
+	background-color: rgb(255, 8, 8);
 }
 .sidebar__icon {
 	max-width: 30px;
+}
+.sidebar__items {
+	height: 219px;
+	padding: 5px 0;
+	overflow-y: auto;
+}
+.sidebar__items::-webkit-scrollbar {
+	width: 10px; /* Ширина скроллбара */
+}
+
+.sidebar__items::-webkit-scrollbar-track {
+	background-color: #f1f1f1; /* Цвет фона трека */
+}
+
+.sidebar__items::-webkit-scrollbar-thumb {
+	cursor: pointer;
+	background-color: #888; /* Цвет полосы прокрутки */
 }
 .sidebar-item {
 	padding: 5px 15px;
@@ -60,6 +91,19 @@
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 	font-size: 16px;
 	column-gap: 15px;
+}
+.information {
+	padding: 15px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 15px;
+}
+.information__item {
+	color: #fff;
+	display: flex;
+	justify-content: space-between;
+	font-size: 18px;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .anim-item {
 	animation: load 1.5s infinite alternate-reverse;
@@ -82,5 +126,15 @@
 	transition: 0.4s;
 }
 .sidebar-item-video:hover {
+	background-color: black;
+}
+.player {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	background-color: rgb(121, 121, 121);
+}
+.active-sidebar-item {
 	background-color: black;
 }

@@ -21,6 +21,8 @@
     "electron-squirrel-startup": "^1.0.0",
     "fs": "^0.0.1-security",
     "node-unrar": "^0.1.6",
+    "rrweb": "^2.0.0-alpha.4",
+    "rrweb-player": "^1.0.0-alpha.4",
     "unrar": "^0.2.0",
     "unrar-js": "^0.2.3"
   },
